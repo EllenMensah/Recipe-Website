@@ -1,18 +1,18 @@
-import React from 'react';
-import K from '../constants';
-import { Link, NavLink } from 'react-router';
-import { LogOutIcon } from 'lucide-react';
-import Fufu2 from '../assets/images/fufu2.jpg'
-
-
-
-
+import React from "react";
+import K from "../constants";
+import { Link, NavLink } from "react-router";
+import { LogOutIcon } from "lucide-react";
+import Fufu2 from "../assets/images/fufu2.jpg";
 
 const Sidebar = () => {
   return (
     <div className="flex flex-col w-60 gap-y-6 bg-white shadow h-screen px-2 py-4 fixed left-0 top-0">
       <span>
-        <img src={Fufu2} alt="Fufu Dish" className="w-50 h-auto drop-shadow-md" />
+        <img
+          src={Fufu2}
+          alt="Fufu Dish"
+          className="w-50 h-auto drop-shadow-md"
+        />
       </span>
       <div className="flex flex-col gap-y-6">
         {K.NAVLINKS.map((link, index) => {
