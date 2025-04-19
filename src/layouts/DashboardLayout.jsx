@@ -7,7 +7,7 @@ import DashNav from '../components/DashNav';
 const DashboardLayout = () => {
   return (
     <div className="flex font-play-au ">
-      <Sidebar/>
+      <Sidebar />
       <div className="ml-60  flex flex-col w-full">
         <DashNav />
         <Outlet />
