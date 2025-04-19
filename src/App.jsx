@@ -8,13 +8,14 @@ import SingleRecipe from './pages/user/SingleRecipe'
 import AllRecipe from './pages/user/AllRecipe'
 import Login from './pages/auth/Login'
 import Signup from './pages/auth/Signup'
-import DashboardLayout from './components/DashboardLayout';
+
 
 import OverView from './pages/dashboard/OverView';
 import MyRecipes from './pages/dashboard/MyRecipes';
 import AddRecipe from './pages/dashboard/AddRecipe';
 import UpdateRecipe from './pages/dashboard/UpdateRecipe';
 import Profile from './pages/dashboard/Profile';
+import DashboardLayout from './components/DashboardLayout';
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path="/signup" element={<Signup />} />
 
-          <Route path='/dashboard' element={<DashboardLayout />}>
+          <Route path='/dashboard' element={<DashboardLayout/>}>
             <Route index={true} element={<OverView />} />
             <Route path='addrecipe' element={<AddRecipe />} />
             <Route path='myrecipes' element={<MyRecipes />} />
