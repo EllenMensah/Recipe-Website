@@ -34,5 +34,3 @@ export const apiGetAuthenticatedUser = async () => apiClient.get("/users/me");
     //     },
     //   });
 
-
-// export const apiForgotPassword = (payload) => apiClient.post("users/forgot-password", payload);
