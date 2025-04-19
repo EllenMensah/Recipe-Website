@@ -8,7 +8,7 @@ import SingleRecipe from './pages/user/SingleRecipe'
 import AllRecipe from './pages/user/AllRecipe'
 import Login from './pages/auth/Login'
 import Signup from './pages/auth/Signup'
-import DashboardLayout from './layouts/DashboardLayout';
+import DashboardLayout from './components/DashboardLayout';
 
 import OverView from './pages/dashboard/OverView';
 import MyRecipes from './pages/dashboard/MyRecipes';
