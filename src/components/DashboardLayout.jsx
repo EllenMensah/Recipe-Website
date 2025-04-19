@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router';
-import DashNav from '../components/DashNav';
-import Sidebar from '../components/Sidebar';
+import DashNav from './DashNav';
+import Sidebar from './Sidebar';
 
 
 
