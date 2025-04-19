@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 
 import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
@@ -11,9 +11,10 @@ import Signup from './pages/auth/Signup'
 import DashboardLayout from './layouts/DashboardLayout';
 
 import OverView from './pages/dashboard/OverView';
-import ChefRecipes from './pages/dashboard/ChefRecipes';
+import MyRecipes from './pages/dashboard/MyRecipes';
 import AddRecipe from './pages/dashboard/AddRecipe';
 import UpdateRecipe from './pages/dashboard/UpdateRecipe';
+import Profile from './pages/dashboard/Profile';
 
 function App() {
 
@@ -33,8 +34,9 @@ function App() {
           <Route path='/dashboard' element={<DashboardLayout />}>
             <Route index={true} element={<OverView />} />
             <Route path='addrecipe' element={<AddRecipe />} />
-            <Route path='chefrecipes' element={<ChefRecipes />} />
+            <Route path='myrecipes' element={<MyRecipes />} />
             <Route path='updaterecipe' element={<UpdateRecipe />} />
+            <Route path='profile' element={<Profile />} />
 
           </Route>
 

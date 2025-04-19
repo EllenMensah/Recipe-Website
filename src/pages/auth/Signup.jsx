@@ -67,6 +67,31 @@ const Signup = () => {
   </div>
 </div>
 
+<div className='mb-4'>
+              <label
+                htmlFor="role"
+                className="block text-sm font-medium text-white"
+              >
+                Role
+              </label>
+              <select
+                type="role"
+                id="role"
+                name="role"
+                placeholder="Enter your role"
+                required
+                defaultValue={" "}
+                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 focus:outline-none"
+              >
+                <option value="" disabled className="text-white">
+                  Select your role
+                </option>
+                <option value="user" className="text-black" >User</option>
+                <option value="vendor" className="text-black" >Chef</option>
+                <option value="superadmin" className="text-black" >Food Lover</option>
+              </select>
+            </div>
+
 
 <div className="mb-4">
   <label htmlFor="country" className="block text-sm font-medium text-white mb-1">

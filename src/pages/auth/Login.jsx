@@ -1,8 +1,11 @@
 import React from "react";
-import {Link} from 'react-router';
+import {Link, useNavigate} from 'react-router';
+
 
 
 const Login = () => {
+
+ 
   return (
     <div className="min-h-screen flex items-center justify-center px-4 bg-[url(assets/images/red.jpg)] bg-cover bg-no-repeat">
       <div className="max-w-md w-full bg-black/60 shadow-lg rounded-xl p-8 space-y-6">

@@ -107,7 +107,7 @@ const AllRecipes = () => {
             <p className="text-gray-600 text-sm text-center">
               {recipe.description}
             </p>
-            <Link to={`/recipes/${recipe.id}`}>
+            <Link to={`singlerecipe/${recipe.id}`}>
               <button className="mt-3 w-full bg-red-600 text-white p-2 rounded-md hover:bg-red-700 transition">
                 View Recipe
               </button>

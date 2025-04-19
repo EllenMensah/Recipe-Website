@@ -12,7 +12,7 @@ const SingleRecipe = () => {
       </Link>
 
       {/* Title and Image */}
-      <h1 className="text-4xl font-bold text-gray-800 mb-4">Fufu with Light Soup</h1>
+      <h1 className="text-4xl font-bold text-gray-800 mb-4">Tuozafi</h1>
       <img
         src={Banku}
         alt="Fufu with Light Soup"
@@ -41,7 +41,7 @@ const SingleRecipe = () => {
       <span className="font-semibold text-gray-700 flex items-center gap-2">
         <i className="fas fa-folder-open"></i> Category
       </span>
-      <span className="text-gray-600">Burgers</span>
+      <span className="text-gray-600">Swallow</span>
     </div>
     <div className="flex justify-between items-center border-b pb-2">
       <span className="font-semibold text-gray-700 flex items-center gap-2">
@@ -73,11 +73,11 @@ const SingleRecipe = () => {
     {/* Ingredient item - unchecked */}
     <li className="flex items-center gap-4 text-lg text-gray-700">
       <div className="w-6 h-6 bg-green-700 rounded-sm"></div>
-      1/4 cup butter, softened
+      1/4 cup Corn Dough
     </li>
     <li className="flex items-center gap-4 text-lg text-gray-700">
       <div className="w-6 h-6 bg-green-700 rounded-sm"></div>
-      2/3 cup butter
+      2/3 cup Water
     </li>
 
     {/* Ingredient item - checked */}
@@ -103,9 +103,34 @@ const SingleRecipe = () => {
 </div>
 
 
+
 </div>
 
+  {/* Video Section */}
+  <div className="mt-12 mb-8">
+        <h2 className="text-2xl font-bold flex items-center gap-2 mb-6">
+          <svg className="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+          </svg>
+          Watch How It's Made
+        </h2>
 
+        <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/watch?v=ONB2HtE7UMA" // Replace with actual YouTube video ID
+            title="An evening with Gordon Ramsay at Michelin-starred Petrus"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        {/* <p className="mt-4 text-gray-600 italic">
+          Watch Chef Gordon Ramsay demonstrate professional techniques for preparing this dish at his Michelin-starred
+          restaurant Petrus.
+        </p> */}
+      </div>
     </div>
   )
 }
