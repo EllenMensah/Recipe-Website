@@ -16,6 +16,7 @@ import AddRecipe from './pages/dashboard/AddRecipe';
 import UpdateRecipe from './pages/dashboard/UpdateRecipe';
 import Profile from './pages/dashboard/Profile';
 import DashboardLayout from './layouts/DashboardLayout';
+import FoodLoverProfile from './pages/user/FoodLoverProfile';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
             <Route index={true} element={<Landing />} />
             <Route path='singlerecipe' element={<SingleRecipe />} />
             <Route path='allrecipes' element={<AllRecipe />} />
+            <Route path="foodlover/:userId" element={<FoodLoverProfile />}/>
           </Route>
 
           <Route path='/login' element={<Login />} />
@@ -38,7 +40,6 @@ function App() {
             <Route path='myrecipes' element={<MyRecipes />} />
             <Route path='updaterecipe' element={<UpdateRecipe />} />
             <Route path='profile' element={<Profile />} />
-
           </Route>
 
         </Routes>
