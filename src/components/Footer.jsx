@@ -1,7 +1,7 @@
 // src/components/Footer.jsx
 import React from 'react';
 import { Link } from 'react-router';
-import { FaYoutube, FaTiktok, FaInstagram, FaFacebook} from 'react-icons/fa';
+import { FaYoutube, FaTiktok, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -19,7 +19,6 @@ const Footer = () => {
           <ul className="space-y-2">
             <li><Link to="/" className="hover:text-red-500">Home</Link></li>
             <li><Link to="/recipes" className="hover:text-red-500">Explore Recipes</Link></li>
-            <li><Link to="/add-recipe" className="hover:text-red-500">Add Recipe</Link></li>
             <li><Link to="/contact" className="hover:text-red-500">Contact</Link></li>
           </ul>
         </div>
@@ -31,7 +30,7 @@ const Footer = () => {
             <a href="https://youtube.com" target="_blank" rel="noreferrer"><FaYoutube /></a>
             <a href="https://tiktok.com" target="_blank" rel="noreferrer"><FaTiktok /></a>
             <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebook/></a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebook /></a>
           </div>
         </div>
       </div>

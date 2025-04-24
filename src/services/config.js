@@ -9,9 +9,9 @@ export const apiClient = axios.create({
 
 apiClient.interceptors.request.use((config) => {
   //Get access token from localStorage
-  const token = localStorage.getItem("token");
+  const accessToken = localStorage.getItem("accessToken");
   //Attach token to Authorization header
-  config.headers.Authorization = `Bearer ${token}`;
+  config.headers.Authorization = `Bearer ${accessToken}`;
   //Return config
   return config;
 });

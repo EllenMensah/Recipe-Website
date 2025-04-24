@@ -24,8 +24,8 @@ const DashNav = () => {
 
         {/* Nav Links - Desktop */}
         <div className="hidden md:flex gap-6 items-center text-gray-700">
-          <a href="/dashboard" className="hover:text-red-600">Home</a>
-          <a href="/add-recipe" className="hover:text-red-600">Add Recipe</a>
+          <a href="/" className="hover:text-red-600">Home</a>
+          <a href="/allrecipes" className="hover:text-red-600">Recipe</a>
           <a href="/my-recipes" className="hover:text-red-600">My Recipes</a>
         </div>
 

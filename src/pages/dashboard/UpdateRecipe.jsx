@@ -64,7 +64,7 @@ const UpdateRecipe = () => {
               rows="4"
               className="w-full border px-4 py-2 rounded-md text-gray-700"
               required
-            /><textarea/>
+            /><textarea />
           </div>
 
           {/* Image */}

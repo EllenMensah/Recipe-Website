@@ -8,7 +8,7 @@ function ProfileTabs({ activeTab, setActiveTab }) {
             <div className="flex">
                 <button
                     className={`px-4 py-2 text-center ${activeTab === 'downloaded'
-                        ? 'border-b-2 border-blue-500 text-blue-500'
+                        ? 'border-b-2 border-[#E7000B] text-[#E7000B]'
                         : 'text-gray-500'
                         }`}
                     onClick={() => setActiveTab('downloaded')}
@@ -17,7 +17,7 @@ function ProfileTabs({ activeTab, setActiveTab }) {
                 </button>
                 <button
                     className={`px-4 py-2 text-center ${activeTab === 'favorite'
-                        ? 'border-b-2 border-blue-500 text-blue-500'
+                        ? 'border-b-2 border-[#E7000B] text-[#E7000B]'
                         : 'text-gray-500'
                         }`}
                     onClick={() => setActiveTab('favorite')}
