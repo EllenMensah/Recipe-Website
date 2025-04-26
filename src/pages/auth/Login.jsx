@@ -27,7 +27,8 @@ const Login = () => {
         // Check if user role is available in the response or fetch from another source
         // Since the response does not include a 'user' object, you may need to fetch the user data separately or assume the role
         // If you have the role available, store it like this
-        const userRole = "chef";  // For now, assume a default role or fetch user data based on access token
+        const user = response.data.user;
+        const userRole = user.role;  // For now, assume a default role or fetch user data based on access token
 
         localStorage.setItem("user", userRole); // Store role in local storage
 

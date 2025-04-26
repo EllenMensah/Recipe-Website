@@ -47,7 +47,7 @@ const DashNav = () => {
       <input type="checkbox" id="menu-toggle" className="hidden peer" />
       <div className="peer-checked:flex hidden flex-col mt-4 md:hidden text-gray-700 gap-3">
         <a href="/dashboard" className="hover:text-red-600">Home</a>
-        <a href="/add-recipe" className="hover:text-red-600">Add Recipe</a>
+        <a href="/allrecipes" className="hover:text-red-600">Recipes</a>
         <a href="/my-recipes" className="hover:text-red-600">My Recipes</a>
         <div className="flex items-center justify-between mt-2">
           <span className="text-sm font-medium">Chef Ama</span>

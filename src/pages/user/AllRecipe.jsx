@@ -4,12 +4,10 @@ import cooking from '../../assets/images/cooking.mp4';
 import { apiGetAllRecipes } from '../../services/recipes';
 
 
-// Dummy recipe data (replace with your real recipe list)
-const imageURL = "/images/"; // Path to your images
+const imageURL = "https://res.cloudinary.com/dibkmj074/image/upload/v1745341081/recipe-api/recipes/"; // Image URL
 
 const AllRecipes = () => {
   const [recipes, setRecipes] = useState([]);
-  const [ads, setAds] = useState([]);
   const [selectedFilterType, setSelectedFilterType] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(true);
@@ -18,14 +16,12 @@ const AllRecipes = () => {
   const getRecipes = async () => {
     try {
       let response;
-
       if (selectedFilterType === "" || searchQuery.trim() === "") {
         response = await apiGetAllRecipes({ limit: 1000 });
       } else {
         response = await apiGetAllRecipes(selectedFilterType, searchQuery);
       }
-
-      setRecipes(response.data.recipes || []); // Assuming your response has 'recipes' array
+      setRecipes(response.data.recipes || []);
     } catch (error) {
       console.log("Error fetching recipes:", error);
       setRecipes([]);
@@ -34,21 +30,9 @@ const AllRecipes = () => {
     }
   };
 
-  // Fetch all adverts
-  const getAds = async () => {
-    try {
-      const response = await apiGetAllAdverts({ limit: 1000 });
-      setAds(response.data.data || []); // Assuming API returns ads array under 'data'
-    } catch (error) {
-      console.log("Error fetching ads:", error);
-      setAds([]);
-    }
-  };
-
-  // UseEffect to fetch data on page load
+  // Fetch recipes on page load or when filter/search changes
   useEffect(() => {
     getRecipes();
-    getAds();
   }, [selectedFilterType, searchQuery]);
 
   return (
@@ -59,7 +43,6 @@ const AllRecipes = () => {
           <source src={cooking} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
 
         {/* Text & Search on Top */}
@@ -71,7 +54,7 @@ const AllRecipes = () => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              getRecipes(); // Call getRecipes when the form is submitted
+              getRecipes();
             }}
             className="flex flex-wrap items-center justify-center gap-4 bg-white/90 p-4 rounded-lg shadow-md text-gray-700"
           >
@@ -120,7 +103,7 @@ const AllRecipes = () => {
               <div key={recipe.id} className="bg-white border rounded-lg shadow-md p-4 flex flex-col gap-1 items-center">
                 <div className="w-[150px] h-40 bg-gray-200 rounded-md">
                   <img
-                    src={`${imageURL}${recipe.image}.jpg`}
+                    src={`${imageURL}${recipe.image}`} // ✅ Corrected here
                     alt={recipe.title}
                     className="w-full h-full object-cover rounded-md"
                   />
@@ -142,33 +125,12 @@ const AllRecipes = () => {
           </p>
         )}
       </div>
-
-      {/* Advert Section */}
-      <div className="max-w-7xl mx-auto p-4 mt-10">
-        <h2 className="text-xl font-semibold mb-4">Advertisements</h2>
-        {ads.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {ads.map((ad) => (
-              <div key={ad.id} className="bg-white border rounded-lg shadow-md p-4">
-                <img
-                  src={`${imageURL}${ad.image}`}
-                  alt={ad.title}
-                  className="w-full h-40 object-cover rounded-md"
-                />
-                <h3 className="text-lg font-semibold mt-3">{ad.title}</h3>
-                <p className="text-gray-600 text-sm">{ad.description}</p>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <p>No recipes available at the moment.</p>
-        )}
-      </div>
     </div>
   );
 };
 
 export default AllRecipes;
+
 
 
 
